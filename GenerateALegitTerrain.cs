@@ -20,14 +20,13 @@ public class GenerateALegitTerrain : MonoBehaviour
     {
         firstTerrain = GameObject.FindWithTag("FirstTerrain");
         aktifTerrain.Add(firstTerrain);
+        generatorObject = GameObject.FindWithTag("TerrainSpawnPoint");
     }
 
     void Update()
     {
         cloneIndexi = AGameManager.secilenHarita;
-
-        generatorObject = GameObject.FindWithTag("TerrainSpawnPoint");
-
+    
         if (Collidedetection.terrainYapakMi || Input.GetKeyDown(KeyCode.T))
         {
             EkleKardesim(0, cloneIndexi);
